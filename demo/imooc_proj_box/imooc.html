@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>慕课网块状文件效果</title>
+    
+    <link rel="stylesheet/less" type="text/css" href="./imooc.less">
+</head>
+<body>
+    <div class="text-proj-cont">
+        <img src="../../imgs/01.jpg" alt="页面测试图片" class="img" />
+        <div class="text">
+            属性把一个或多个下拉阴影添加到框上。该属性是一个用逗号分隔阴影的列表，每个阴影由 2-4 个长度值、
+            属性把一个或多个下拉阴影添加到框上。该属性是一个用逗号分隔阴影的列表，每个阴影由 2-4 个长度值、
+        </div>
+        
+        <div class="bay">
+            sadf
+        </div>
+    </div>
+
+    <div class="faint-proj-cont">
+        <!-- <img src="../../imgs/01.jpg" alt="页面测试图片" class="img" /> -->
+        <div class="blur-back">
+        </div>
+        <div class="text">
+            <p>
+                属性把一个或多个下拉阴影添加到框上。该属性是一个用逗号分隔阴影的列表，每个阴影由 2-4 个长度值、    
+            </p>
+        </div>
+        
+        <div class="bay">asdfa</div>
+    </div>
+
+    <div class="slope-cont" onmousemove="test(event,this)">
+        <div class="text-box">
+            <h2 class="text">
+                属性把一
+            </h2>
+        </div>
+        
+    </div>
+    
+    
+    <script src="../../libs/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="../../libs/less/dist/less.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function test(e,ele){
+            //这里可得到鼠标X坐标
+            var pointX = e.pageX;
+            //这里可以得到鼠标Y坐标
+            var pointY = e.pageY;
+
+            console.log("pointX:"+pointX);
+            console.log("pointY:"+pointY);
+
+            // console.log("ele:"+ele);
+            var offset = $(ele).offset();
+            console.log("offset:"+offset);
+            var left = $(ele).offset().left;
+            var top = $(ele).offset().top;
+            console.log("left:"+left);
+            console.log("top:"+top);
+        }
+    </script>
+</body>
+</html>
