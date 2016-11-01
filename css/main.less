@@ -1,0 +1,24 @@
+body{
+    margin: 40px;
+    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    color:#666;
+    font-size: 14px;
+}
+
+p{
+	margin:0px;
+}
+
+.opacity(@opacity1:40,@opacity2:0.4){
+    filter:alpha(Opacity=@opacity1);
+    opacity:@opacity2;
+}
+
+.filter-blur(@size:20px){
+    -webkit-filter: blur(@size);
+    -moz-filter: blur(@size);
+    -ms-filter: blur(@size);
+    -o-filter: blur(@size);
+    filter: blur(@size);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+}
