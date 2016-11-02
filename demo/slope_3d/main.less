@@ -1,0 +1,64 @@
+@import "../../css/main.less";
+.slope-cont{
+    width: 640px;
+    height: 426px;
+    // border: solid #eee 1px;
+    position: relative;
+    // box-sizing: border-box;
+    float: left;
+    margin: 8px;
+    // overflow: hidden;
+    // transition:all 500ms;
+    text-align: center;
+
+    .slope-box{
+        // transition:all 300ms;
+        width: 100%;
+        height: 100%;
+        // position: relative;
+        background-color: #ccc;
+        box-shadow: 0 0px 10px 0 #ddd;
+
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg) rotateY(0deg);
+
+        .slope-link{
+            // background-color: #aaa;
+            display: block;
+            // width: 100%;
+            // height: 100%;
+        }
+        .slope-detail{
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 30px;
+            bottom: 30px;
+
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+
+            //用于鼠标的穿透处理,若不加,会出现边缘
+            pointer-events: none;
+
+            //用于z轴的设定
+            -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
+
+            // border: 0 solid #00BCD4;
+            // transition: border .4s ease;
+            color:#eee;
+            box-shadow: 0px 0px 10px 0px #ddd;
+            text-shadow: 3px 5px 5px #333;
+        }
+    }
+}

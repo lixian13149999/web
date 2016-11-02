@@ -7,12 +7,6 @@ body {
 p {
   margin: 0px;
 }
-body {
-  margin: 40px;
-  font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
-  color: #666;
-  font-size: 14px;
-}
 .text-proj-cont {
   width: 220px;
   height: 180px;
@@ -111,27 +105,45 @@ body {
   top: -180px;
 }
 .slope-cont {
-  width: 220px;
-  height: 180px;
+  width: 480px;
+  height: 270px;
   position: relative;
-  box-sizing: border-box;
-  /*box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);*/
-  box-shadow: 0 0px 10px 0 #ddd;
   float: left;
   margin: 8px;
-  overflow: hidden;
-  transition: all 500ms;
-  padding: 10px;
-  background-color: #ccc;
   text-align: center;
 }
-.slope-cont:hover .text-box .text {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+.slope-cont .slope-box {
+  width: 480px;
+  height: 270px;
+  background-color: #ccc;
+  box-shadow: 0 0px 10px 0 #ddd;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
 }
-.slope-cont .text-box .text {
-  transition: .4s ease;
-  font-size: 28px;
-  font-weight: 700;
+.slope-cont .slope-box .slope-link {
+  display: block;
+}
+.slope-cont .slope-box .slope-detail {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  -webkit-transform: translateZ(30px);
+  transform: translateZ(30px);
+  color: #eee;
+  box-shadow: 0px 0px 10px 0px #ddd;
+  text-shadow: 3px 5px 5px #333;
 }

@@ -1,12 +1,5 @@
 @import "../../css/main.less";
 
-body{
-    margin: 40px;
-    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
-    color:#666;
-    font-size: 14px;
-}
-
 .text-proj-cont{
     width: 220px;
     height: 180px;
@@ -115,58 +108,65 @@ body{
 }
 
 .slope-cont{
-    width: 220px;
-    height: 180px;
+    width: 480px;
+    height: 270px;
     // border: solid #eee 1px;
     position: relative;
-    box-sizing: border-box;
-/*box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);*/
-    box-shadow: 0 0px 10px 0 #ddd;
+    // box-sizing: border-box;
     float: left;
     margin: 8px;
-    overflow: hidden;
-    transition:all 500ms;
-    padding:10px;
-    background-color: #ccc;
+    // overflow: hidden;
+    // transition:all 500ms;
     text-align: center;
 
-    &:hover{
-        .text-box{
-            // border-width: 10px;
-            // box-shadow: 0 10px 30px #ccc;
-            .text{
-                // opacity: 1;
-                -webkit-transform:scale(1);
-                -ms-transform:scale(1);
-                transform:scale(1);
-            }
+    .slope-box{
+        // transition:all 300ms;
+        width: 480px;
+        height: 270px;
+        // position: relative;
+        background-color: #ccc;
+        box-shadow: 0 0px 10px 0 #ddd;
+
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg) rotateY(0deg);
+
+        .slope-link{
+            // background-color: #aaa;
+            display: block;
+            // width: 100%;
+            // height: 100%;
+        }
+        .slope-detail{
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 30px;
+            bottom: 30px;
+
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+
+            //用于鼠标的穿透处理,若不加,会出现边缘
+            pointer-events: none;
+
+            //用于z轴的设定
+            -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
+
+            // border: 0 solid #00BCD4;
+            // transition: border .4s ease;
+            color:#eee;
+            box-shadow: 0px 0px 10px 0px #ddd;
+            text-shadow: 3px 5px 5px #333;
         }
     }
-
-    .text-box{
-        
-        .text{
-            
-            transition: .4s ease;
-            font-size: 28px;
-            font-weight: 700;
-
-            // -webkit-transform:scale(0);
-            // -ms-transform:scale(0);
-            // transform:scale(0);
-
-        }
-        
-    }
-    // transform:scaleX(30);
-    
-
-    // &:hover{
-    //     z-index: 2; 
-    //     -webkit-transform:rotate3d(.6,1,0,10deg);
-    //     // -moz-transform:rotate3d(.6,1,.6,45deg);
-    //     // -ms-transform:rotate3d(.6,1,.6,45deg);
-    //     // -o-transform:rotate3d(.6,1,.6,45deg);
-    //     // transform:rotate3d(.6,1,.6,45deg);
-    // }
 }
