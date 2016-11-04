@@ -1,17 +1,116 @@
 <!DOCTYPE html>
-<!--html标签==>跟标签,所有的网页标签都在html中-->
+<!-- 
+    DOCTYPE
+    1. 它是用来告知 Web 浏览器页面使用了哪种 HTML 版本
+
+    2. 在 HTML 4.01 中，<!DOCTYPE> 声明需引用 DTD （文档类型声明），因为 HTML 4.01 是基于 SGML （Standard Generalized Markup Language 标准通用标记语言）。DTD 指定了标记语言的规则，确保了浏览器能够正确的渲染内容。
+    
+    3. HTML5 不是基于 SGML，因此不要求引用 DTD
+
+    4. 标签没有结束标签
+    5. 声明不区分大小写
+-->
 <html lang="en">
 <!-- 
-标签用于定义文档的头部，它是所有头部元素的容器。头部元素有
-title、script、 style、link、 meta
-等标签
+    1. 标签告知浏览器这是一个 HTML 文档。
+    2. 标签是 HTML 文档中最外层的元素。
+    3. 标签是所有其他 HTML 元素（除了 <!DOCTYPE> 标签）的容器。
  -->
-<head>
-	<meta charset="UTF-8">
-	<title>html标签总汇(示例)</title>
+ <head>
+    <meta charset="UTF-8">
+    <!-- <title>html标签汇总(示例)</title> -->
+    <!-- 
+        1. 标签定义文档的标题，在所有 HTML 文档中是必需的
+        2. 定义浏览器工具栏中的标题
+        3. 提供页面被添加到收藏夹时的标题
+        4. 显示在搜索引擎结果中的页面标题
+        5. 一个 HTML 文档中不能有一个以上的 <title> 元素
+     -->
 </head>
-<body>
-<!-- 这是页面中注释的方式, -->
 
+<body>
+<!-- 
+	1. 标签定义文档的主体
+	2. 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等）
+ -->
+
+<!-- 
+	h1~h6
+-->
+ 	<h1>h1</h1>
+ 	<h2>h2</h2>
+ 	<h3>h3</h3>
+ 	<h4>h4</h4>
+ 	<h5>h5</h5>
+ 	<h6>h6</h6>
+<a id="tips">有用的提示部分</a>
+
+<!-- 
+ 	段落
+-->
+	<p>We want the GitHub community to be a welcoming environment where people feel empowered to share their opinion. We are now accepting feedback on our proposed Community Guidelines.</p>
+
+<!-- 
+	换行
+ -->
+ 这是一行信息,<br>换行
+
+<!-- 
+	水平线
+ -->
+	<hr>
+
+<!-- 
+	只取首字母的缩写,html5中已经不支持此标签
+	好像不起作用
+ -->
+	<acronym>We want the GitHub community</acronym>
+
+<!-- 
+	一个缩写
+	好像不起作用
+ -->
+ <abbr title="">We want the GitHub community</abbr>
+
+
+<!-- 
+文档作者或拥有者的联系信息
+ -->
+<address>
+	这是地址相关 的信息 起作用吗
+</address>
+
+<!-- 
+粗体文本
+ -->
+ <b>粗体文本</b>
+
+<!-- 
+义文本的方向
+ -->
+ <br>
+<bdo dir="ltr">从左向右显示</bdo>
+<br>
+<bdo dir="rtl">从右向左显示</bdo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#tips">访问有用的提示部分</a>
+<div class="sanjiao"></div>
 </body>
 </html>
