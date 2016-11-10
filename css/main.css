@@ -1,9 +1,16 @@
 body {
-  margin: 40px;
+  margin: 0px;
   font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
   color: #666;
   font-size: 14px;
 }
+a {
+  text-decoration: none;
+  color: #666;
+}
 p {
   margin: 0px;
+}
+ul {
+  list-style: none;
 }

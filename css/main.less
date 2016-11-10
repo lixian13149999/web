@@ -1,12 +1,21 @@
 body{
-    margin: 40px;
+    margin: 0px;
     font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
     color:#666;
     font-size: 14px;
 }
 
+a{
+    text-decoration:none;
+    color:#666;
+}
+
 p{
 	margin:0px;
+}
+
+ul{
+    list-style: none;
 }
 
 .opacity(@opacity1:40,@opacity2:0.4){
@@ -21,4 +30,12 @@ p{
     -o-filter: blur(@size);
     filter: blur(@size);
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+}
+
+//边框阴影效果
+.box-shadow(@x:0,@y:0,@blur:7px,@spread:1px,@color:#888){  
+    -webkit-box-shadow:@x @y @blur @spread @color;
+    -moz-box-shadow:@x @y @blur @spread @color;
+    -ms-box-shadow:@x @y @blur @spread @color;
+    box-shadow:@x @y @blur @spread @color;
 }
