@@ -1,0 +1,26 @@
+body {
+  margin: 0px;
+  font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+  color: #666;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+p {
+  margin: 0px;
+}
+ul {
+  list-style: none;
+}
+.main {
+  width: 600px;
+  height: 400px;
+  border: solid #ccc 1px;
+  -webkit-box-shadow: 0 0 8px 3px #ccc;
+  -moz-box-shadow: 0 0 8px 3px #ccc;
+  -ms-box-shadow: 0 0 8px 3px #ccc;
+  box-shadow: 0 0 8px 3px #ccc;
+  margin: 30px auto;
+}
