@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echarts demo04 xAxis</title>
+    
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+    <div id="main" class="main" style="width: 800px;height:450px;"></div>
+    
+    <!-- <script src="../../libs/jquery/dist/jquery.min.js" type="text/javascript"></script> -->
+    <script src="../../libs/echarts/echarts.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	var app = echarts.init(document.getElementById('main'));
+
+    	var option = {
+    		title: {
+		        text: '世界人口总量',
+		        subtext: '数据来自网络'
+		    },
+		    tooltip: {
+		        trigger: 'axis',
+		        axisPointer: {
+		            type: 'shadow'
+		        }
+		    },
+		    legend: {
+		        data: ['2011年', '2012年']
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+
+
+
+		    xAxis: [{
+		    	// gridIndex:0,//x 轴所在的 grid 的索引
+		    	position:'bottom',//x 轴的位置
+		    	offset:0,//X 轴相对于默认位置的偏移
+
+		    	//坐标轴类型
+		    	//'value' 数值轴，适用于连续数据。
+		    	//'category' 类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据
+		    	//'time' 时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度
+		    	//'log' 对数轴。适用于对数数据
+		    	//一般结合data使用,还需后期专门查看
+		    	type:'value',
+
+		    	name:'x轴的name',//坐标的x轴名称
+		    	nameLocation:'middle',//坐标名称轴的位置
+		    	nameTextStyle:{//坐标轴名称的样式
+		    		color:'#000',//文本
+    				fontStyle:'normal',//字体风格
+    				fontWeight:'500',//文本字体的粗细
+    				fontFamily:'sans-serif',//字体系列
+    				fontSize:18//字体大小
+		    	},
+
+		    	nameGap:-130,//坐标轴名称与轴线之间的距离
+		    	nameRotate:45,
+
+		    	//坐标轴两边留白策略，类目轴和非类目轴的设置和表现不一样。
+		    	//类目轴中 boundaryGap 可以配置为 true 和 false
+		    	//非类目轴，包括时间，数值，对数轴，boundaryGap是一个两个值的数组，
+		    	//分别表示数据最小值和最大值的延伸范围，可以直接设置数值或者相对的百分比，
+		    	//在设置 min 和 max 后无效
+		    	boundaryGap: ['20%', '20%'],//两边分别留白20%
+
+		    	min:10,//坐标轴刻度最小值，在类目轴中无效
+		    	max:700000,//坐标轴刻度最大值，在类目轴中无效
+		    	scale:false,
+		    	// splitNumber:10,//坐标轴的分割段数
+
+		        // data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+		    }],
+
+
+
+		    yAxis: {
+		        type: 'category',
+		        data: ['巴西','印尼','美国','印度','中国','世界人口(万)']
+		    },
+		    series: [
+		        {
+		            name: '2011年',
+		            type: 'bar',
+		            data: [18203, 23489, 29034, 104970, 131744, 630230]
+		        },
+		        {
+		            name: '2012年',
+		            type: 'bar',
+		            data: [19325, 23438, 31000, 121594, 134141, 681807]
+		        }
+		    ]
+
+    	};
+
+    	app.setOption(option);
+    </script>
+</body>
+</html>

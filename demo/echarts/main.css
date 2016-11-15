@@ -22,5 +22,5 @@ ul {
   -moz-box-shadow: 0 0 8px 3px #ccc;
   -ms-box-shadow: 0 0 8px 3px #ccc;
   box-shadow: 0 0 8px 3px #ccc;
-  margin: 30px auto;
+  margin: 30px auto 0px;
 }

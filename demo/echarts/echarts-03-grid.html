@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echarts demo03 grid</title>
+    
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+    <div id="main" class="main" style="width: 800px;height:450px;"></div>
+    
+    <!-- <script src="../../libs/jquery/dist/jquery.min.js" type="text/javascript"></script> -->
+    <script src="../../libs/echarts/echarts.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	var app = echarts.init(document.getElementById('main'));
+
+    	var option = {
+    		title: {
+		        text: 'ECharts 入门示例'
+		    },
+		    tooltip: {},
+		    legend: {
+		        data:['销量']
+		    },
+
+
+            //直角坐标系内绘图网格，单个 grid 内最多可以放置上下两个 X 轴，左右两个 Y 轴
+//		    grid:[
+//                {x: '7%', y: '7%', width: '38%', height: '38%'},
+//                {x2: '7%', y: '7%', width: '38%', height: '38%'},
+//                {x: '7%', y2: '7%', width: '38%', height: '38%'},
+//                {x2: '7%', y2: '7%', width: '38%', height: '38%'}
+//            ],
+            
+		    //主显示区域的容器框样式,可以设置多个栅格样式
+            //其他样式和title,legend相同,可参考02,03
+		    grid:{
+		    	show:true,
+                height:200,
+                borderColor:'#666',
+                borderWidth:2
+//                backgroundColor:'#ccc'
+		    },
+
+
+		    xAxis: {
+		        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+		    },
+		    yAxis: {},
+		    series: [{
+		        name: '销量',
+		        type: 'bar',
+		        data: [5, 20, 36, 10, 10, 20]
+		    }]
+    	};
+
+    	app.setOption(option);
+    </script>
+</body>
+</html>
